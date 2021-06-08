@@ -1,0 +1,309 @@
+/*setting base parameters*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*setting variables*/
+:root{
+    --colorfg:black;
+    --colorbg1:darkkhaki;
+    --colorbg2: chocolate;
+    --colorbg3: white;
+    --fontstyleb:Lato,Avenir, Adobe Heiti Std, Segoe UI, Trebuchet MS, sans‑serif;
+    --fontstyleh:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --shadow1:rgba(50, 50, 93, 0.25) 0px 2px 5px -1px;
+    --shadow2:rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+/*setting general styling*/
+body{
+    line-height: 1.5em;
+    letter-spacing: .025em;
+    word-spacing: .05em;
+}
+h1, h2, h3, h4, h5, h6 { 
+    font-family: var(--fontstyleh); 
+}
+p{
+    font-family: var(--fontstyleb); 
+}
+
+/*site layouts*/
+.flexrbetween{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flexraround{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flexrcenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexcdown{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.fleft{
+    float: left;
+}
+
+.fright{
+    float: right;
+}
+
+/* utilities */
+.menu{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li{
+    display: inline-block;
+    border: .15em solid transparent;
+}
+
+.menu a{
+    color:inherit;
+    display: block;
+    padding: .4em .5em;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: .05em;
+}
+.menu li:hover{
+    border-bottom-color:var(--colorbg2);
+}
+
+.box{
+    width: 100%;
+    height: auto;
+    padding: .5em;
+}
+
+.debug{
+    background-color: aqua;
+    border: .15em solid black;
+}
+
+.debug2{
+    border: 1px solid yellow;
+}
+
+.responsive{
+    width: inherit;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.centerimage{
+    display: block;
+    margin: 0 auto;
+}
+
+.centertext{
+    text-align: center;
+}
+
+.contentpad{
+    padding: 2em 1em;
+}
+
+.titlepad{
+    padding-bottom: 1em;
+}
+
+.widebody{
+    width: 55%;
+}
+
+.smallbody{
+    width: 30%;
+}
+
+.bg1{
+    background-color: var(--colorbg1);
+}
+
+.bg2{
+    background-color: var(--colorbg2);
+}
+
+.bg3{
+    background-color: var(--colorbg3);
+}
+
+/*beta css for panel height*/
+.stretchpanel{
+    padding: 4em 0;
+}
+
+.stretchpanelside{
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.buttonstyle1{
+    background-color: transparent;
+    font-weight: bolder;
+    border: .3em solid black;
+}
+
+/*site wide settings*/
+.pagewrapper{
+    position: relative;
+    max-width: 100vw;
+    height: auto;
+    
+}
+.header{
+    color: var(--colorbg3);
+    background-color: var(--colorfg);
+}
+
+.footer{
+    font-size: 80%;
+    color:var(--colorbg3);
+    background-color: var(--colorfg);
+}
+
+/*section specific styles*/
+.headerimagep{
+    height: 3em;
+    width: 10em;
+}
+
+.logo{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.splash{
+    position: relative;
+    height: 42em;
+}
+.splashtext{
+    width: 14em;
+    position: absolute;
+    bottom: 1em;
+    left: 50%;
+    margin-left: -7em;
+    padding-bottom: .5em;
+    z-index: 1;
+}
+
+.productpanel{
+   width: 60%;
+   height: auto;
+   padding: .5em 1em;
+   border: .05em dashed black;
+   flex-wrap: wrap;
+}
+
+.producttile{
+    position: relative;
+    width: 12em;
+    height: 15em;
+    border: .1em solid black;
+    box-shadow: var(--shadow2,--shadow1);
+}
+
+.producttile img{
+    width: 100%;
+    padding: .2em .3em;
+}
+
+.producttile h3{
+    width: 100%;
+    height: 20%;
+}
+
+.feedbackpanel{
+    width: 60%;
+    height: auto;
+    padding: .5em 1em;
+    border: .05em dashed black;
+    flex-wrap: wrap;
+ }
+ 
+ .feedbacktile{
+     width: 49%;
+     height: auto;
+     padding: .5em .6em;
+     margin: .2em .1em;
+     border: .04em dotted black;
+     box-shadow: var(--shadow2,--shadow1);
+ }
+
+ .feedbackid{
+     padding-bottom: .5em;
+ }
+
+ .feedbacktile p{
+     line-height: 1.2em;
+     letter-spacing: .01em;
+ }
+
+ .contacthub{
+     flex-direction: row-reverse;
+     background-color:lightslategray;
+     flex-wrap: wrap;
+ }
+
+ .contacthubpanel{
+     width: auto;
+     height: auto;
+     margin-right: 3%;
+     padding: .25em .5em;
+     border: .05em dashed transparent;
+ }
+
+ .contacthubpanel input{
+    width: 15em;
+    height: 2.5em;
+    margin: .2em 2em .2em .1em;
+    padding-left: .2em;   
+}
+
+.contacthubpanel button{
+    width: 5em;
+    height: 1.7em;
+    margin: .2em 2em .2em .1em;    
+}
+
+.faqpanel{
+    width: 90%;
+    padding: 2em 1em;
+    border: .2em double black;
+}
+
+.faqtile{
+    width: auto;
+    padding: .5em 1em;
+    margin-bottom: 2em;
+}
+
+.question{
+    font-family: var(--fontstyleh);
+    font-weight: bold;
+    font-size: 115%;
+}
+
+.answer{
+    font-family: var(--fontstyleb);
+    font-size: 105%;
+}
