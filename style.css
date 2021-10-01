@@ -8,8 +8,15 @@
 /*setting variables*/
 :root{
     --colorfg:black;
-    --colorbg1:darkkhaki;
-    --colorbg2: chocolate;
+    /*darkkhaki,chocolate
+    new combo brown (dark-light)
+    #110702
+    #2B1608
+    #4D270E
+    #644117
+    */
+    --colorbg1:#2B1608;
+    --colorbg2: #644117;
     --colorbg3: white;
     --fontstyleb:Lato,Avenir, Adobe Heiti Std, Segoe UI, Trebuchet MS, sans‑serif;
     --fontstyleh:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -183,7 +190,7 @@ p{
 /*section specific styles*/
 .headerimagep{
     height: 3em;
-    width: 10em;
+    width: 11em;
 }
 
 .logo{
@@ -197,21 +204,28 @@ p{
     height: 42em;
 }
 .splashtext{
-    width: 14em;
+    width: auto;
     position: absolute;
+    left: 50vw;
     bottom: 1em;
-    left: 50%;
-    margin-left: -7em;
+    transform: translateX(-50%);
+    margin-left: -.5em;
     padding-bottom: .5em;
     z-index: 1;
+    /*border: solid green 2px;*/
 }
 
 .productpanel{
-   width: 60%;
+   width: 58%;
    height: auto;
    padding: .5em 1em;
-   border: .05em dashed black;
+   border: .05em dashed transparent;
    flex-wrap: wrap;
+}
+
+.productpanel img{
+    padding: .5em;
+    border: .05em dashed goldenrod;
 }
 
 .producttile{
@@ -236,14 +250,14 @@ p{
     width: 60%;
     height: auto;
     padding: .5em 1em;
-    border: .05em dashed black;
+    border-left: .05em dashed goldenrod;
     flex-wrap: wrap;
  }
  
  .feedbacktile{
      width: 49%;
-     height: auto;
-     padding: .5em .6em;
+     height: 50%;
+     padding: 1em .6em;
      margin: .2em .1em;
      border: .04em dotted black;
      box-shadow: var(--shadow2,--shadow1);
@@ -260,7 +274,7 @@ p{
 
  .contacthub{
      flex-direction: row-reverse;
-     background-color:lightslategray;
+     background-color:var(--colorbg2);
      flex-wrap: wrap;
  }
 
@@ -288,7 +302,7 @@ p{
 .faqpanel{
     width: 90%;
     padding: 2em 1em;
-    border: .2em double black;
+    border: .2em double goldenrod;
 }
 
 .faqtile{
@@ -301,9 +315,36 @@ p{
     font-family: var(--fontstyleh);
     font-weight: bold;
     font-size: 115%;
+    color: goldenrod;
 }
 
 .answer{
     font-family: var(--fontstyleb);
     font-size: 105%;
+    color: var(--colorbg3);
+}
+
+.test2{
+    color: olive;
+}
+
+.textTitle{
+    color: goldenrod;
+}
+
+.textSubtitle{
+    color: var(--colorbg3);
+}
+
+.textPassage{
+    color: var(--colorbg3);
+}
+
+.temp{
+    align-items: stretch;
+}
+
+.socialLink{
+    text-decoration: none;
+    color: black;
 }
